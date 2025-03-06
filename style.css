@@ -45,3 +45,33 @@ h2 {
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+/* Background Gradient */
+body {
+    background: linear-gradient(to bottom right, #f8c8d0, #f1e1e1);
+}
+
+/* Atau jika ingin menggunakan gambar latar belakang */
+.container {
+    background-image: url('path/to/your/image.jpg'); /* Ganti dengan path gambar yang diinginkan */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Jika ingin menambahkan pola */
+body {
+    background-color: #f1e1e1; /* Warna dasar */
+    background-image: url('path/to/your/pattern.png'); /* Ganti dengan path pola yang diinginkan */
+    background-repeat: repeat; /* Ulangi pola */
+}
+
+/* Tambahkan efek overlay untuk memberikan kesan elegan */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Warna overlay putih dengan transparansi */
+    z-index: 0; /* Di belakang konten */
+}
