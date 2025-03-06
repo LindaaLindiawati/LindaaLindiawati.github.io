@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linda Lindiawati</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .button-container {
+            position: absolute;
+            bottom: 20px; /* Mengatur posisi tombol di bagian bawah */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px; /* Jarak antar tombol */
+        }
+        button {
+            padding: 5px 10px; /* Ukuran kecil */
+            font-size: 14px; /* Ukuran font kecil */
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <video autoplay muted loop class="background-video">
+        <video autoplay muted loop class="background-video" id="background-video">
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <audio autoplay loop>
+        <audio autoplay loop id="background-music">
             <source src="music.mp3" type="audio/mpeg">
             Your browser does not support the audio tag.
         </audio>
@@ -20,6 +35,37 @@
             <h1>Linda Lindiawati</h1>
             <h2>Semangat Kerjanya Cantikkk!</h2>
         </div>
+        <div class="button-container">
+            <button id="toggle-music">Pause Music</button>
+            <button id="toggle-video">Pause Video</button>
+        </div>
     </div>
+
+    <script>
+        const music = document.getElementById('background-music');
+        const video = document.getElementById('background-video');
+        const toggleMusicButton = document.getElementById('toggle-music');
+        const toggleVideoButton = document.getElementById('toggle-video');
+
+        toggleMusicButton.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                toggleMusicButton.textContent = 'Pause Music';
+            } else {
+                music.pause();
+                toggleMusicButton.textContent = 'Play Music';
+            }
+        });
+
+        toggleVideoButton.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                toggleVideoButton.textContent = 'Pause Video';
+            } else {
+                video.pause();
+                toggleVideoButton.textContent = 'Play Video';
+            }
+        });
+    </script>
 </body>
 </html>
