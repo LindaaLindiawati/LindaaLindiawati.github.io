@@ -1,4 +1,4 @@
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,7 +45,6 @@ h2 {
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 /* Background Gradient */
 body {
     background: linear-gradient(to bottom right, #f8c8d0, #f1e1e1);
@@ -75,4 +74,15 @@ body {
     bottom: 0;
     background: rgba(255, 255, 255, 0.5); /* Warna overlay putih dengan transparansi */
     z-index: 0; /* Di belakang konten */
+}
+footer {
+    text-align: center; /* Mengatur teks footer agar berada di tengah */
+    position: relative; /* Mengatur posisi footer */
+    bottom: 0; /* Menempel di bagian bawah */
+    width: 100%; /* Lebar footer 100% */
+    padding: 10px 0; /* Padding atas dan bawah */
+    background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang dengan transparansi */
+    font-size: 16px; /* Ukuran font */
+    color: #000000; /* Warna teks */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus di atas footer */
 }
