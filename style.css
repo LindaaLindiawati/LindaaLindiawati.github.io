@@ -48,22 +48,53 @@ h2 {
 /* Background Gradient */
 body {
     background: linear-gradient(to bottom right, #f8c8d0, #f1e1e1);
-}
-
 /* Atau jika ingin menggunakan gambar latar belakang */
-.container {
-    background-image: url('path/to/your/image.jpg'); /* Ganti dengan path gambar yang diinginkan */
-    background-size: cover;
-    background-position: center;
 }
-
-/* Jika ingin menambahkan pola */
 body {
-    background-color: #f1e1e1; /* Warna dasar */
-    background-image: url('path/to/your/pattern.png'); /* Ganti dengan path pola yang diinginkan */
-    background-repeat: repeat; /* Ulangi pola */
+    background-image: url('background.jpg'); /* Ganti dengan URL gambar latar belakang */
+    background-size: 100px 100px; /* Mengatur ukuran gambar latar belakang */
+    background-repeat: repeat; /* Mengulangi gambar untuk mengisi layar */
+    margin: 0;
+    height: 100vh; /* Mengatur tinggi body agar memenuhi layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mengatur konten agar terdistribusi secara vertikal */
 }
 
+.content {
+    text-align: center;
+    color: white; /* Mengatur warna teks */
+    margin-top: 20px; /* Jarak dari atas */
+    text-align: center; /* Mengatur teks footer agar berada di tengah */
+    position: relative; /* Mengatur posisi footer */
+    bottom: 0; /* Menempel di bagian bawah */
+    width: 100%; /* Lebar footer 100% */
+    padding: 5px 0; /* Padding atas dan bawah */
+    background-color: rgba(255, 255, 255, 0.20); /* Warna latar belakang dengan transparansi */
+    font-size: 16px; /* Ukuran font */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus di atas footer */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 10px; /* Mengatur posisi tombol di bagian bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 50px; /* Jarak antar tombol */
+}
+
+button {
+    padding: 10px 15px; /* Ukuran kecil */
+    font-size: 10px; /* Ukuran font kecil */
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    color: white; /* Mengatur warna teks footer */
+    margin: 30px 0; /* Jarak dari atas dan bawah */
+}
 /* Tambahkan efek overlay untuk memberikan kesan elegan */
 .container::before {
     content: '';
